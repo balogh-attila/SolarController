@@ -1,0 +1,24 @@
+---
+inverter:
+  source: SBU               # utility_first / solar_first / SBU
+  output_quality: ups       # appliance, ups
+  overload:
+    bypass: yes
+    restart: yes
+  overtemp:
+    restart: yes
+  alarm:
+    primary_source_interrupt: no
+
+charger:
+  source: only_solar        # utility_first / solar_first / solar_and_utility / only_solar
+  max_current: 50
+  utility_current: 10
+
+battery:
+  type: user                 # user / agm / flooded
+  bulk_voltage:        56.8  # default 56.4 / 48.0-58.4
+  float_voltage:       54.4  # default 54.0 / 48.0-58.4
+  redischarge_voltage: 53.0  # default 54.0 / 48.0-58.0
+  recharge_voltage:    50.0  # default 46.0 / 44.0-51.0
+  cutoff_voltage:      44.0  # default 42.0 / 40.0-48.0
