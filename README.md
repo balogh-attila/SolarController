@@ -37,7 +37,7 @@ Place the customized configuration file in the /srv/solar directory.
 
 ```sh
 docker run -d --name solar --restart unless-stopped \
-	--env CONFIG=/cfg/config.yaml \
+  --env CONFIG=/cfg/config.yaml \
   --volume /srv/solar:/cfg \
   --device /dev/ttyUSB0:/dev/ttyUSB0 \
   solar:latest
