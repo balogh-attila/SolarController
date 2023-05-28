@@ -2,7 +2,7 @@
 
 The main goals of this software is to provide monitoring and control to Voltronic solar inverters in an open source and container native way. It can read metrics form the inverter and write it to an influxdb database, and can write inverter settings from a yaml configuration file to the inverter. The configuration file is monitored for changes and apply any changes without reload.
 
-Tested and used on a Growatt 3000-24 SPL and a Growatt 5000 SL solar inverter.
+Tested and in production use on a Growatt 3000-24 SPL and a Growatt 5000 SL solar inverter.
 
 May be working on Voltronic Axpert series inverters and related OEM brand names.
 
@@ -29,7 +29,7 @@ docker run -dt --name grafana --restart unless-stopped \
 ```
 Recommended to use better network topology or a firewall in production.
 
-There is an example grafana dashboard in the grafana subdirectory. You need to add an influxdb data source for the installed influxdb instance to work.
+There is an example grafana dashboard in the grafana subdirectory. You need to add an influxdb data source pointed towards the installed influxdb instance to work.
 
 ## Running Solar Inverter Controller
 Preload the built docker image on the runner machine.
